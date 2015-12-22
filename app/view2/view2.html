@@ -1,5 +1,18 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<form ng-submit="addBike(bike)">
+<div class="bike-inputs">
+	<input type="text" ng-model="bike.mark" placeholder="marka">
+	<input type="text" ng-model="bike.class" placeholder="class">
+	<input type="text" ng-model="bike.model" placeholder="model">
+	<input type="text" ng-model="bike.material" placeholder="material">
+	<input type="text" ng-model="bike.frame" placeholder="frame">
+	<input type="text" ng-model="bike.wheels" placeholder="wheels">
+</div>
+<input type="submit" value="submit">
+</form>
+<p>{{bike}}</p>
+<p>{{bikes}}</p>
+
+
+
+<h3>{{bike.mark}}</h3>
+<img ng-src="{{bike.model}}" alt="">

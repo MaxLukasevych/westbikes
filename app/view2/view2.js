@@ -9,6 +9,24 @@ angular.module('myApp.view2', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', [function() {
+.controller('View2Ctrl', ["$scope", function($scope) {
+
+
+$scope.bike = {};
+
+
+$scope.bikes =   JSON.parse(localStorage.getItem('bikes'))
+if (!$scope.bikes) {
+	$scope.bikes = [];
+}
+
+$scope.addBike = function (max){
+	$scope.bikes.push(max);
+	localStorage.setItem('bikes', JSON.stringify($scope.bikes));
+	$scope.bike = {};
+}
+
+
+
 
 }]);
